@@ -58,9 +58,9 @@ jobs:
       with:
         name: windows
         path: |
-          JirenyteSetup.exe
-          JirenyteSetup32.exe
-          JirenyteSetupAArch64.exe
+          NostalZiaaSetup.exe
+          NostalZiaaSetup32.exe
+          NostalZiaaSetupAArch64.exe
         if-no-files-found: error
   linux:
     runs-on: ubuntu-24.04
@@ -83,7 +83,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: jar
-        path: build/libs/Jirenyte.jar
+        path: build/libs/NostalZiaa.jar
         if-no-files-found: error
     - uses: actions/upload-artifact@v4
       with:
@@ -96,7 +96,7 @@ jobs:
           Jirenyte-aarch64.AppImage
         if-no-files-found: error
   macos:
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
     - uses: actions/setup-python@v5
       with:
