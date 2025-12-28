@@ -97,6 +97,8 @@ jobs:
         if-no-files-found: error
   macos:
     runs-on: macos-latest
+    env:
+      CSC_IDENTITY_AUTO_DISCOVERY: false
     steps:
     - uses: actions/setup-python@v5
       with:
