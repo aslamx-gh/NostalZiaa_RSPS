@@ -92,8 +92,8 @@ jobs:
           appimagetool-x86_64.AppImage
           runtime-x86_64
           runtime-aarch64
-          Jirenyte.AppImage
-          Jirenyte-aarch64.AppImage
+          NostalZiaa.AppImage
+          NostalZiaa-aarch64.AppImage
         if-no-files-found: error
   macos:
     runs-on: macos-latest
@@ -128,13 +128,13 @@ jobs:
       run: ./build-osx-aarch64.sh --build --dmg
     # tar app to keep permissions correct
     - name: tar app
-      run: tar -cf app.tar build/macos-x64/Jirenyte.app build/macos-aarch64/Jirenyte.app build-osx-x64.sh build-osx-aarch64.sh osx/signing.entitlements
+      run: tar -cf app.tar build/macos-x64/NostalZiaa.app build/macos-aarch64/NostalZiaa.app build-osx-x64.sh build-osx-aarch64.sh osx/signing.entitlements
     - uses: actions/upload-artifact@v4
       with:
         name: macos-dmg
         path: |
-          Jirenyte-x64.dmg
-          Jirenyte-aarch64.dmg
+          NostalZiaa-x64.dmg
+          NostalZiaa-aarch64.dmg
         if-no-files-found: error
     - uses: actions/upload-artifact@v4
       with:
